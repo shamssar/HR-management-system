@@ -29,11 +29,11 @@ Employee.prototype.NewSalary = function(){
     
     if (this.Level==="Senior"){
         this.Salary= getRndInteger(1500, 2000);
-        this.Salary=this.Salary *(1-7.5);
+        this.Salary=this.Salary *(1-0.075);
     }
     if (this.Level==="Mid-Senior") {
         this.Salary= getRndInteger(1000, 1500);
-        this.Salary=this.Salary *(1-7.5);
+        this.Salary=this.Salary *(1-0.075);
     }
     if (this.Level ==="Junior") {
         this.Salary= getRndInteger(500, 1000);
