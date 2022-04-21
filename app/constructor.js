@@ -45,8 +45,8 @@ Employee.prototype.NewSalary = function(){
 
 Employee.prototype.render = function () {
     
-    document.write (`<h2>the Employee id is ${this.EmployeeID} and name is ${this.FullName} and the salary is ${this.Salary}</h2>`);
-  
+    // document.write (`<h2>the Employee id is ${this.EmployeeID} and name is ${this.FullName} and the salary is ${this.Salary}</h2>`);
+  document.getElementById ("hello").innerHTML +=`<br>the Employee id is ${this.EmployeeID} and name is ${this.FullName} and the salary is ${this.Salary}`;
 }
 
 let Employee1 = new Employee(1000,"Ghazi Samer","Administration","Senior") ;
