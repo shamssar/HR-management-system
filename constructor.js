@@ -1,6 +1,7 @@
 'use strict';
 
 //constructor
+let arr = []
 function Employee(EmployeeID,FullName,Department,Level,ImageURL) {
     this.EmployeeID = EmployeeID;
     this.FullName = FullName;
@@ -8,16 +9,12 @@ function Employee(EmployeeID,FullName,Department,Level,ImageURL) {
     this.Level = Level;
     this.ImageURL = ImageURL;
     this.Salary = 0;
+    arr.push(this)
 }
 
     
 
-    // Employee.Salary = NewSalary;
 
-// var tax = 7.5
-// Employee.prototype.NetSalary = function() {
-//     this.NewSalary *(1-tax); 
-// }
 
 //function for random salary
 
@@ -44,10 +41,13 @@ Employee.prototype.NewSalary = function(){
     
 
 Employee.prototype.render = function () {
-    
-    // document.write (`<h2>the Employee id is ${this.EmployeeID} and name is ${this.FullName} and the salary is ${this.Salary}</h2>`);
-  document.getElementById ("hello").innerHTML +=`<br>the Employee id is ${this.EmployeeID} and name is ${this.FullName} and the salary is ${this.Salary}`;
-}
+    document.querySelector(".container").innerHTML+= `<div class="icon">
+    <img src=${this.ImageURL} alt="">
+    <p><span>Name</span>:${this.FullName}-ID:${this.EmployeeID}</p>
+    <p><span>Department</span>:${this.Department}-level:${this.Level}</p>
+    <p>${this.selaryNew}</p>
+  </div>`
+     
 
 let Employee1 = new Employee(1000,"Ghazi Samer","Administration","Senior") ;
 let Employee2 = new Employee(1001,"Lana Ali","Finance","Senior");
@@ -56,6 +56,22 @@ let Employee4 = new Employee(1003,"Safi Walid	","Administration","Mid-Senior");
 let Employee5 = new Employee(1004,"Omar Zaid	","Development","Senior");
 let Employee6 = new Employee(1005,"Rana Saleh","Development","Junior");
 let Employee7 = new Employee(1006,"Hadi Ahmad","Finance","Mid-Senior");
+
+renderall ();
+function renderall ()
+for(let i=0;i<arr.length;i++){
+    arr[i].selary();
+    arr[i].render();
+  }
+
+function addEvent () {
+    const form = document.querySelector("form");
+       const submit = document.querySelectorAll(".submit");
+}
+
+
+
+
 
 Employee1.NewSalary() ;
 Employee1.render();
@@ -73,7 +89,5 @@ Employee7.NewSalary() ;
 Employee7.render();
 
 
-
-
-
+}
 
