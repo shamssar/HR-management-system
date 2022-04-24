@@ -1,107 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    
-    <link rel="stylesheet" href="style.css">
-     
-   
+    <title>HR mangment System </title>
 
-    <title>Form </title> 
+
+    <link rel="stylesheet" href="style.css">
+
+
+
 </head>
+
 <body>
 
-<header>
+    <header>
+        <header id="header1">
+            <img src="./logoipsum-logo-20.svg" alt="Logo">
 
-    <a href="#defalut" class="logo">HR-management-system</a>
-        
-
-    <ul>
-          <li><a href="form.html">Home</a></li>
-          <li><a href="accounting.html">About us</a></li>
-    </ul>
-</header>
-
-  
-
-    
-        <div class="container">
-
-        </div>
-
-        <header>Registration</header>
-
-        <form action="#">
-            <div class="form first">
-                <div class="details personal">
-                    <span class="title">Employee Details</span>
-
-                    <div class="fields">
-                        <div class="input-field">
-                            <label>Full Name</label>
-                            <input type="text" placeholder="Enter your name" required>
-                        </div>
-
-                        
-
-                        
-                        <div class="input-field">
-                            <label>Deparment</label>
-                            <select required>
-                                <option disabled selected>Select Deparment</option>
-                                <option>Administration</option>
-                                <option>Development</option>
-                                <option>Finance</option>
-                            </select>
-                        </div>
+            <h1>
+                HR-management-system
+            </h1>
 
 
-                    <div class="input-field">
-                            <label>Level</label>
-                            <select required>
-                                <option disabled selected>Select Level</option>
-                                <option>Junior</option>
-                                <option>Mid_Senior</option>
-                                <option>Senior</option>
-                            </select>
-                        </div>
-                    <div class="fields">
-                        <div class="input-field">
-
-                        <label for="image">Image link:</label>
-                        <input type="text" placeholder="URL Image" required>
-    
-                        
-                    </div>
-                
-
-                
-
-                
-                        
-
-                    <button class="sumbit">
-                        <span class="sumbit">sumbit</span>
-                        <i class="uil uil-navigator"></i>
-                    </button>
+            
               
+                <div class="navbar">
+                    <a href="form.html">Home</a>
+                    <a href="accounting.html">About Us</a>
+                  </div>
             
 
-                        
+        </header>
 
-                
 
-                        
-                   
-                    
-        </form>
-    </div>
- 
-   
-    <script src="./constructor.js"></script>
+
+        <main id="main">
+            <form id="formid">
+
+                <label for="fname">Full Name:</label><br>
+                <input type="text" id="fname" name="fname" placeholder="full name"><br>
+
+                <br>
+                <label for="Deparment"></label><br>
+                <select required>
+                    <option disabled selected>Select Deparment</option>
+                    <option>Administration</option>
+                    <option>Development</option>
+                    <option>Finance</option>
+                </select>
+
+                <br>
+
+                <labelfor="Level"></label> <br>
+                    <select required>
+                        <option disabled selected>Select Level</option>
+                        <option>Junior</option>
+                        <option>Mid_Senior</option>
+                        <option>Senior</option>
+                    </select>
+                    <br>
+
+
+                    <label for="image">Image link:</label> <br>
+                    <input type="text" id="img1" name="img1" placeholder="image link"><br> <br>
+
+                    <input type="submit" value="submit">
+
+
+            </form>
+            <section id="section"></section>
+
+        </main>
+
+
+
+
+        <script src="./constructor.js"></script>
 
 </body>
 
