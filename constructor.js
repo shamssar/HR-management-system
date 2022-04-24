@@ -48,102 +48,88 @@ Employee.prototype.printing = function () {
 
     }
 
-        let departmentAndLevel = document.createElement("p");
-        departmentAndLevel.textContent = "Department : " + arr[i].department + "      " + "Level :" + arr[i].level;
-        section.appendChild(departmentAndLevel);
+    let departmentAndLevel = document.createElement("p");
+    departmentAndLevel.textContent = "Department : " + arr[i].department + "      " + "Level :" + arr[i].level;
+    section.appendChild(departmentAndLevel);
 
-    }
+}
 
-    formid.addEventListener("submit", handleSubmit);
+formid.addEventListener("submit", handleSubmit);
 
-    function handleSubmit(event) {
-        event.preventDefault();
+function handleSubmit(event) {
+    event.preventDefault();
 
-    }
+}
 
-        
-        let newUser = new Employee(generateID(), fullName, department, level, imgURL);
-        newUser.printing();
-        newUser.NewSalary();
-        saveData(arr);
 
-        function generateID() {
-            var val = Math.floor(1000 + Math.random() * 9000);
-            return val;
-        }
+let newUser = new Employee(generateID(), fullName, department, level, imgURL);
+newUser.printing();
+newUser.NewSalary();
+saveData(arr);
 
-        let Employee1 = new Employee(1000, "Ghazi Samer", "Administration", "Senior");
-        let Employee2 = new Employee(1001, "Lana Ali", "Finance", "Senior");
-        let Employee3 = new Employee(1002, "Tamara Ayoub", "Marketing", "Senior");
-        let Employee4 = new Employee(1003, "Safi Walid	", "Administration", "Mid-Senior");
-        let Employee5 = new Employee(1004, "Omar Zaid	", "Development", "Senior");
-        let Employee6 = new Employee(1005, "Rana Saleh", "Development", "Junior");
-        let Employee7 = new Employee(1006, "Hadi Ahmad", "Finance", "Mid-Senior");
+function generateID() {
+    var val = Math.floor(1000 + Math.random() * 9000);
+    return val;
+}
 
-        renderAll();
-        // local storage:
-        function saveData(data) {
+let Employee1 = new Employee(1000, "Ghazi Samer", "Administration", "Senior");
+let Employee2 = new Employee(1001, "Lana Ali", "Finance", "Senior");
+let Employee3 = new Employee(1002, "Tamara Ayoub", "Marketing", "Senior");
+let Employee4 = new Employee(1003, "Safi Walid	", "Administration", "Mid-Senior");
+let Employee5 = new Employee(1004, "Omar Zaid	", "Development", "Senior");
+let Employee6 = new Employee(1005, "Rana Saleh", "Development", "Junior");
+let Employee7 = new Employee(1006, "Hadi Ahmad", "Finance", "Mid-Senior");
 
-            let stringfiyData = JSON.stringify(data);
-            localStorage.setItem("employee", stringfiyData);
-        }
-        tableElement = document.getElementById("tableId");
+renderAll();
+// local storage:
+function saveData(data) {
 
-        
+    let stringfiyData = JSON.stringify(data);
+    localStorage.setItem("employee", stringfiyData);
+}
+
+function getData() {
+    let retrievedData = localStorage.getItem("employee");
+    let arrayData = JSON.parse(retrievedData);
+    if (arrayData != null) {
+        for (let i = 0; i < arrayData.length; i++)
+            new Employee (arrayData[i].name, arrayData[i].department, arrayData[i].level, arrayData[i].image, arrayData[i].NewSalary);
+
+
         getData();
 
-        function getData() {
-            let retrievedData = localStorage.getItem("employee");
-            let arrayData = JSON.parse(retrievedData);
-            if (arrayData != null) {
-                for (let i = 0; i < arrayData.length; i++) {
-                    console.log(i);
-                }
-                let x = arrayData[i].level;
-                console.log(x);
-                let y = arrayData[i].fullName
-                let tr = document.createElement("tr")
-                tableElement.appendChild(tr)
-                let nameTd = document.createElement("td")
-                nameTd.textContent = x;
-                tr.appendChild(nameTd);
-
-                let salaryTd = document.createElement("td");
-                salaryTd.textContent = y;
-                tr.appendChild(salaryTd);
 
 
 
 
 
 
+        //function for random salary
 
-                //function for random salary
+        function getRndInteger(min, max) {
 
-                function getRndInteger(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
 
-                    return Math.floor(Math.random() * (max - min + 1)) + min;
-                }
-
-                function renderall() {
-                    for (let i = 0; i < arr.length; i++) {
-                        arr[i].selary();
-                        arr[i].render();
-                    }
-                }
-                function addEvent() {
-                    const form = document.querySelector("form");
-                    const submit = document.querySelectorAll(".submit");
-                }
-
-
-
+        function renderall() {
+            for (let i = 0; i < arr.length; i++) {
+                arr[i].selary();
+                arr[i].render();
             }
-
+        }
+        function addEvent() {
+            const form = document.querySelector("form");
+            const submit = document.querySelectorAll(".submit");
         }
 
 
-        getData();
+
+    }
+
+}
+
+
+getData();
 
 
 
