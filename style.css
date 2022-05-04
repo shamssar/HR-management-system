@@ -1,59 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-
-
-
+header {
+    display: grid ;
+    grid-template-columns: 1fr  100px;
+    grid-template-rows: 50px ;
    
-
- 
-  .navbar a {
-     justify-content: space-between; 
-    color: #000;
-   position: fixed;
-   top: 0;
-   width: 100%;
-  }
- 
-
-.header1 {
-text-align: center;
-font-size: x-large;
-}
-
-
- table,th,tr,td{
-    border:2px solid black;
-    border-collapse: collapse;
-    padding: 10px 30px;
+    width: 95%;
+    height: 30x ;
+    margin: 0px;
+    padding: 60px;
     text-align: center;
-    color: purple;
+    background: pink;
+   color: black;
+   font-size: 30px;
 }
- table {
-    margin: auto;
-    margin-top: 100px;
-    margin-bottom: 100px;
-}
- 
-    
 
-
-body{
-    min-height: 100vh;
+header button {
+    height: 30px ;
+    width: 95px ;
+   
     display: flex;
     align-items: center;
     justify-content: center;
-    background: pink;
+    margin-top: 35px ;
+    
+    background-color: purple;
+    
 }
 
-section {
-    border: 5px solid rosybrown;
-    box-shadow: 0;
-    min-width: 200;
-    margin: auto;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: bisque;
-    border: 70px;
+main {
+    margin-top: 0px;
+    width: 100%;
+    height: 6000px ;
+    background-color:beige ;
+    color: rosybrown;
+    
+   font-size: 15px;
+}
+h2 {
+    margin: 0px;
 }
 
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+ 
+  
+footer {
 
+    width: 100%;
+    height: 50px;
+    display: grid ;
+    grid-template-columns: 1fr 1fr;
+    color: black;
+    font-size: 15px;
+    align-items: center;
+ 
+    
+    background-color:blanchedalmond;
+}
